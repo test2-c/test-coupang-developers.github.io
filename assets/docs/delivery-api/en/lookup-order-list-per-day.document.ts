@@ -1,17 +1,23 @@
 export const lookupOrderListPerDayDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `delivery-api`,   // input category ex) exchange-service-api
     id: `lookup-order-list-per-day`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `lookup_order_list_per_day`,
     name: `발주서 목록 조회(일단위 페이징)`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

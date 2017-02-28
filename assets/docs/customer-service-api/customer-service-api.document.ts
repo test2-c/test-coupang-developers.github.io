@@ -1,8 +1,8 @@
 
 import {lookupCustomerInquiryByProductDocument} from "./ko/lookup-customer-inquiry-by-product.document";
-import {customerEnquiryResponseDocument} from "./ko/customer-enquiry-response.document";
-import {lookupCustomerServiceCenterEnquiryDocument} from "./ko/lookup-customer-service-center-enquiry.document";
-import {customerServiceCenterEnquiryResponseDocument} from "./ko/customer-service-center-enquiry-response.document";
+import {customerEnquiryResponseDocument} from "./ko/answer-to-customer-inquiry.document";
+import {lookupCustomerServiceCenterEnquiryDocument} from "./ko/lookup-coupang-call-center-inquiry.document";
+import {customerServiceCenterEnquiryResponseDocument} from "./ko/answer-to-coupang-call-center-inquiry.document";
 export const customerServiceApiDocs = {
   ko:[],
   en:[]

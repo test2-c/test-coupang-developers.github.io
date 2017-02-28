@@ -1,17 +1,23 @@
 export const lookupOrderBookDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `delivery-api`,   // input category ex) exchange-service-api
     id: `lookup-order-book`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `lookup_order_book`,
     name: `발주서 단건 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: `2017-02-09`, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: `draft`,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: `2017-02-09`, // yyyy-mm-dd  ex> 2016-12-23

@@ -5,11 +5,17 @@ export const lookupSellerProductDocument = {
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `lookup-seller-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
-    name: `업체상품 조회`,       // use display name, i will change 'translation key'
+    anchorId: `lookup_seller_product`,
+    name: `상품 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: `업체상품 조회`,
+      anchorId: ``,
+    },
+
   },
 
   apiInfo: {
@@ -161,7 +167,7 @@ export const lookupSellerProductDocument = {
           _description: `배송방법`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -206,7 +212,7 @@ export const lookupSellerProductDocument = {
           _description: `택배사코드`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -400,7 +406,7 @@ export const lookupSellerProductDocument = {
           _description: `배송비종류`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -467,7 +473,7 @@ export const lookupSellerProductDocument = {
           _description: `도서산간 배송여부`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -493,7 +499,7 @@ export const lookupSellerProductDocument = {
           _description: `묶음 배송여부`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -602,7 +608,7 @@ export const lookupSellerProductDocument = {
           _description: `착불여부`,
           _relation: ``,
           _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -813,7 +819,7 @@ export const lookupSellerProductDocument = {
               _description: `19세이상`,
               _relation: ``,
               _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -839,7 +845,7 @@ export const lookupSellerProductDocument = {
               _description: `과세여부`,
               _relation: ``,
               _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -865,7 +871,7 @@ export const lookupSellerProductDocument = {
               _description: `병행수입여부`,
               _relation: ``,
               _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -891,7 +897,7 @@ export const lookupSellerProductDocument = {
               _description: `해외구매대행여부`,
               _relation: ``,
               _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -1138,7 +1144,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
               require: true,
               _description: `옵션목록(속성)`,
               _relation: ``,
-              _referenceInfo: `카테고리 기준으로 정해진 옵션 목록을 입력하는 객체. 필요한 만큼 반복 입력 가능, 동일한 타입명, 타입값을 갖는 속성 객체는 한번만 입력할 수 있음, 한개 이상 등록 필수`,
+              _referenceInfo: `카테고리 기준으로 정해진 옵션 목록을 입력하는 객체. `,
               _warning: ``,
               children: [
                 {
@@ -1162,6 +1168,20 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
                   _warning: ``,
                   children: false
                 }
+                ,
+                {
+                  name: `exposed`,
+                  type: `String`,
+                  require: true,
+                  _description: `구매옵션/검색옵션 구분필드`,
+                  _relation: ``,
+                  _referenceInfo: `
+                  EXPOSED : 구매옵션<br/>
+                  NONE : 검색옵션
+                  `,
+                  _warning: ``,
+                  children: false
+                }
               ]
             }
             ,
@@ -1181,7 +1201,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
                   _description: `컨텐츠타입`,
                   _relation: ``,
                   _referenceInfo: `
-                <table class="doc-table-col-2">
+                <table class="table">
                 <tr>
                   <th>Parameter Name</th>
                   <th>Status</th>
@@ -1251,7 +1271,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
                       _description: `세부타입`,
                       _relation: ``,
                       _referenceInfo: `
-                    <table class="doc-table-col-2">
+                    <table class="table">
                     <tr>
                       <th>Parameter Name</th>
                       <th>Status</th>
@@ -1334,6 +1354,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
     }
   ],
   sample: {
+    endpoint: ``,
     code: [
       {
         language: `http`,

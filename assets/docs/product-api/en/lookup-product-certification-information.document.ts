@@ -1,6 +1,6 @@
 export const lookupProductCertificationInformationDocument = {
-  note: ``,
-  
+  note: `Deprecated`,
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
@@ -9,9 +9,14 @@ export const lookupProductCertificationInformationDocument = {
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

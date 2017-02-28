@@ -1,17 +1,23 @@
 export const lookupExposureProductListPagingDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `lookup-exposure-product-list-paging`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `lookup_exposure_product_list_paging`,
     name: `노출상품 목록 페이징 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

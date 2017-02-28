@@ -1,17 +1,23 @@
 export const productPreparationProcessingDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `delivery-api`,   // input category ex) exchange-service-api
     id: `product-preparation-processing`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `product_preparation_processing`,
     name: `상품준비중 처리`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

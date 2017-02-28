@@ -1,17 +1,23 @@
 export const deleteSellerProductDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `delete-seller-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `delete_seller_product`,
     name: `업체상품 삭제`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

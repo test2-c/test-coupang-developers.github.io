@@ -5,11 +5,17 @@ export const modifySellerProductDocument = {
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `modify-seller-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
-    name: `업체상품 수정`,       // use display name, i will change 'translation key'
+    anchorId: `modify_seller_product`,
+    name: `상품 수정`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: `업체상품 수정`,
+      anchorId: ``,
+    },
+
   },
 
   apiInfo: {
@@ -109,7 +115,7 @@ export const modifySellerProductDocument = {
         _description: `배송방법`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -154,7 +160,7 @@ export const modifySellerProductDocument = {
         _description: `택배사코드`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -348,7 +354,7 @@ export const modifySellerProductDocument = {
         _description: `배송비종류`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -415,7 +421,7 @@ export const modifySellerProductDocument = {
         _description: `도서산간 배송여부`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -441,7 +447,7 @@ export const modifySellerProductDocument = {
         _description: `묶음 배송여부`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -550,7 +556,7 @@ export const modifySellerProductDocument = {
         _description: `착불여부`,
         _relation: ``,
         _referenceInfo: `
-        <table class="doc-table-col-2">
+        <table class="table">
         <tr>
           <th>Parameter Name</th>
           <th>Status</th>
@@ -761,7 +767,7 @@ export const modifySellerProductDocument = {
             _description: `19세이상`,
             _relation: ``,
             _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -787,7 +793,7 @@ export const modifySellerProductDocument = {
             _description: `과세여부`,
             _relation: ``,
             _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -813,7 +819,7 @@ export const modifySellerProductDocument = {
             _description: `병행수입여부`,
             _relation: ``,
             _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -839,7 +845,7 @@ export const modifySellerProductDocument = {
             _description: `해외구매대행여부`,
             _relation: ``,
             _referenceInfo: `
-            <table class="doc-table-col-2">
+            <table class="table">
             <tr>
               <th>Parameter Name</th>
               <th>Status</th>
@@ -1129,7 +1135,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
                 _description: `컨텐츠타입`,
                 _relation: ``,
                 _referenceInfo: `
-                <table class="doc-table-col-2">
+                <table class="table">
                 <tr>
                   <th>Parameter Name</th>
                   <th>Status</th>
@@ -1199,7 +1205,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
                     _description: `세부타입`,
                     _relation: ``,
                     _referenceInfo: `
-                    <table class="doc-table-col-2">
+                    <table class="table">
                     <tr>
                       <th>Parameter Name</th>
                       <th>Status</th>
@@ -1319,6 +1325,7 @@ DETAIL : 기타이미지 (정사각형: 최소 500 x 500px ~ 최대 5000 x 5000p
     }
   ],
   sample: {
+    endpoint: ``,
     code: [
       {
         language: `http`,

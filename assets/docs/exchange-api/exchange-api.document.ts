@@ -1,9 +1,7 @@
 import {lookupChangeRequestListDocument} from "./ko/lookup-change-request-list.document";
-import {confirmationOfExchangeProductReceiptDocument} from "./ko/confirmation-of-exchange-product-receipt.document";
-import {denyExchangeRequestDocument} from "./ko/deny-exchange-request.document";
-import {createExchangeProductInvoiceDocument} from "./ko/create-exchange-product-invoice.document";
-import {createExchangeProductCoupangConfirmRequestDocument} from "./ko/create-exchange-product-coupang-confirm-request.document";
-import {cancelExchangeProductCoupangConfirmRequestDocument} from "./ko/cancel-exchange-product-coupang-confrim-request.document";
+import {exchangeRequestProductReceiptConfirmationProcessingDocument} from "./ko/exchange-request-product-receipt-confirmation-processing.document";
+import {exchangeRequestDenyProcessingDocument} from "./ko/exchange-request-deny-processing.document";
+import {processingExchangeProductInvoiceUploadDocument} from "./ko/processing-exchange-product-invoice-upload.document";
 
 export const exchangeApiDocs = {
   ko:[],
@@ -11,8 +9,6 @@ export const exchangeApiDocs = {
 };
 
 exchangeApiDocs.ko.push(lookupChangeRequestListDocument);
-exchangeApiDocs.ko.push(confirmationOfExchangeProductReceiptDocument);
-exchangeApiDocs.ko.push(denyExchangeRequestDocument);
-exchangeApiDocs.ko.push(createExchangeProductInvoiceDocument);
-exchangeApiDocs.ko.push(createExchangeProductCoupangConfirmRequestDocument);
-exchangeApiDocs.ko.push(cancelExchangeProductCoupangConfirmRequestDocument);
+exchangeApiDocs.ko.push(exchangeRequestProductReceiptConfirmationProcessingDocument);
+exchangeApiDocs.ko.push(exchangeRequestDenyProcessingDocument);
+exchangeApiDocs.ko.push(processingExchangeProductInvoiceUploadDocument)

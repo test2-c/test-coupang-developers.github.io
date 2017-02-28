@@ -12,12 +12,12 @@ export const exampleApiDocs = {
 };
 
 var temp = [];
-temp.push(exampleDocument);
-temp.push(exchangeGoodsCoupangConfirmRequestCancelationDocument);
-temp.push(exchangeGoodsCoupangConfirmRequestCreationDocument);
-temp.push(exchangeGoodsInvoiceCreationDocument);
-temp.push(exchangeGoodsReceivedConfirmationDocument);
-temp.push(exchangeRequestRejection);
-temp.push(lookupDeliveryModifyHistoryDocumentCopy);
+// temp.push(exampleDocument);
+// temp.push(exchangeGoodsCoupangConfirmRequestCancelationDocument);
+// temp.push(exchangeGoodsCoupangConfirmRequestCreationDocument);
+// temp.push(exchangeGoodsInvoiceCreationDocument);
+// temp.push(exchangeGoodsReceivedConfirmationDocument);
+// temp.push(exchangeRequestRejection);
+// temp.push(lookupDeliveryModifyHistoryDocumentCopy);
 
 exampleApiDocs.ko = exampleApiDocs.en = temp;

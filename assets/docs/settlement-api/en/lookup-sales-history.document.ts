@@ -5,11 +5,17 @@ export const lookupSalesHistoryDocument = {
   documentInfo: {
     category: `settlement-api`,   // input category ex) exchange-service-api
     id: `lookup-fees-retroactive`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `lookup_fees_retroactive`,
     name: `수수료 소급분 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
 
   apiInfo: {

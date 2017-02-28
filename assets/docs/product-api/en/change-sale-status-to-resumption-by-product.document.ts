@@ -1,17 +1,23 @@
 export const changeSaleStatusToResumptionByProductDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `change-sale-status-to-resumption-by-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `change_sale_status_to_resumption_by_product`,
     name: `상품별 판매 재개`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

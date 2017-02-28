@@ -1,5 +1,5 @@
-import {lookupFeesRetroactiveDocument} from "./en/lookup-fees-retroactive.document";
-import {lookupSalesHistoryDocument} from "./en/lookup-sales-history.document";
+import {lookupFeesRetroactiveDocument} from "./ko/lookup-fees-retroactive.document";
+import {lookupSalesHistoryDocument} from "./ko/lookup-sales-history.document";
 
 export const settlementApiDocs = {
   ko:[],

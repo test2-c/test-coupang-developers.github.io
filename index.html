@@ -23,12 +23,22 @@
   <!-- base url -->
   <base href="/">
 
-<script src="polyfills.a8b6c6d6f960bbaa8775.bundle.js" type="text/javascript" defer></script><script src="vendor.cf6911cc3e510ac64d1b.bundle.js" type="text/javascript" defer></script><script src="main.5e6879473b539f391db3.bundle.js" type="text/javascript" defer></script></head>
+  <!-- for github io redirection -->
+  <script>
+    sessionStorage.redirect = location.href;
+  </script>
+  <!-- for github io redirection -->
+  <meta http-equiv="refresh" content="0;URL='https://coupang-developers.github.io/'"></meta>
+
+<script src="polyfills.a8b6c6d6f960bbaa8775.bundle.js" type="text/javascript" defer></script><script src="vendor.cf6911cc3e510ac64d1b.bundle.js" type="text/javascript" defer></script><script src="main.99c4c72df1f4df68b4e5.bundle.js" type="text/javascript" defer></script></head>
 
 <body>
-
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
   <app>
-    Loading...
   </app>
 
   <script>window.module = 'aot';</script>
@@ -48,6 +58,16 @@
 
   
 
+  <script>
+    //for github io redirection
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+  </script>
 
 </body>
 </html>

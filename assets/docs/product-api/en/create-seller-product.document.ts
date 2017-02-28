@@ -1,19 +1,23 @@
-
-
 export const createSellerProductDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `create-seller-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
-    name: `업체상품 생성`,       // use display name, i will change 'translation key'
+    anchorId: `create_seller_product`,
+    name: `상품 생성`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

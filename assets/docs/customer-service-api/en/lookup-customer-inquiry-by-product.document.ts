@@ -1,17 +1,23 @@
 export const lookupCustomerInquiryByProductDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `customer-service-api`,   // input category ex) exchange-service-api
     id: `lookup-customer-inquiry-by-product`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
+    anchorId: `lookup_customer_inquiry_by_product`,
     name: `상품별 고객문의 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23

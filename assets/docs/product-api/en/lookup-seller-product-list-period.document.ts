@@ -1,17 +1,23 @@
 export const lookupSellerProductListPeriodDocument = {
   note: ``,
-  
+
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
     id: `lookup-seller-product-list-period`,           // use **dash** and *english*  ex) coupang-confirm-request-creation
-    name: `업체상품 목록 구간 조회`,       // use display name, i will change 'translation key'
+    anchorId: `lookup_seller_product_list_period`,
+    name: `상품 목록 구간 조회`,       // use display name, i will change 'translation key'
     displayOrderPriority: 999, // use order priority. 1 is high(top),
     documentState: ``, // draft, candidate, release
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
-    reflectionDate: ``
+    reflectionDate: ``,
+    documentLegacyInfo: {
+      name: ``,
+      anchorId: ``,
+    },
+
   },
-  
+
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
