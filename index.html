@@ -23,7 +23,7 @@
   <!-- base url -->
   <base href="/">
 
-<script src="polyfills.a8b6c6d6f960bbaa8775.bundle.js" type="text/javascript" defer></script><script src="vendor.cf6911cc3e510ac64d1b.bundle.js" type="text/javascript" defer></script><script src="main.99c4c72df1f4df68b4e5.bundle.js" type="text/javascript" defer></script></head>
+<script src="polyfills.a8b6c6d6f960bbaa8775.bundle.js" type="text/javascript" defer></script><script src="vendor.cf6911cc3e510ac64d1b.bundle.js" type="text/javascript" defer></script><script src="main.ec2e5d46bb961c2f5cc2.bundle.js" type="text/javascript" defer></script></head>
 
 <body>
   <div id="loader-wrapper">
@@ -49,8 +49,8 @@
       //for github io redirection
     (function(){
       var redirect = sessionStorage.redirect;
-      console.log(redirect);
       delete sessionStorage.redirect;
+      console.log(redirect);
       if (redirect && redirect != location.href) {
         history.replaceState(null, null, redirect);
       }
