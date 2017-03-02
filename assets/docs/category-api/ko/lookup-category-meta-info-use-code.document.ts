@@ -194,6 +194,30 @@ NONE : 그룹속성 아님<br/>
 `,
               _warning: ``,
               children: false
+            },
+            {
+              name: `exposed`,
+              type: ``,
+              require: false,
+              _description: `구매옵션/검색옵션 구분값`,
+              _relation: ``,
+              _referenceInfo: `
+              <table class="table">
+              <tr>
+                <th>Response Value</th>
+                <th>Mean</th>
+              </tr>
+              <tr>
+                 <td>EXPOSED</td>
+                 <td>구매옵션</td>
+              </tr>
+                <td>NONE</td>
+                <td>검색옵션</td>
+              </tr>
+              </table>
+`,
+              _warning: ``,
+              children: false
             }
           ]
         },

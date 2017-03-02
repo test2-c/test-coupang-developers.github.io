@@ -1,6 +1,6 @@
 export const lookupCategoryMetaInfoUseCodeDocument = {
   note: ``,
-
+  
   //don't modify documentInfo
   documentInfo: {
     category: `product-api`,   // input category ex) exchange-service-api
@@ -16,7 +16,7 @@ export const lookupCategoryMetaInfoUseCodeDocument = {
       anchorId: ``,
     },
   },
-
+  
   apiInfo: {
     state: ``,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
@@ -190,6 +190,30 @@ export const lookupCategoryMetaInfoUseCodeDocument = {
               _referenceInfo: `
 NONE : 그룹속성 아님<br/>
 1 or 2 : 그룹 속성임. 이 경우 속성정보에 동일한 groupNumber 값이 있는 속성이 있으며 두개 중 1개만 입력 해야 함.<br/>
+`,
+              _warning: ``,
+              children: false
+            },
+            {
+              name: `exposed`,
+              type: ``,
+              require: false,
+              _description: `구매옵션/검색옵션 구분값`,
+              _relation: ``,
+              _referenceInfo: `
+              <table class="table">
+              <tr>
+                <th>Response Value</th>
+                <th>Mean</th>
+              </tr>
+              <tr>
+                 <td>EXPOSED</td>
+                 <td>구매옵션</td>
+              </tr>
+                <td>NONE</td>
+                <td>검색옵션</td>
+              </tr>
+              </table>
 `,
               _warning: ``,
               children: false

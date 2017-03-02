@@ -15,6 +15,7 @@ export const categoryApiDocs = {
 categoryApiDocs.ko.push(lookupExposureCategoryDocument);
 categoryApiDocs.ko.push(lookupExposureCategoryListDocument);
 categoryApiDocs.ko.push(exposureCategoryValidationDocument);
-categoryApiDocs.ko.push(lookupCategoryMetaInfoUseIdDocument);
+// Deprecated
+// categoryApiDocs.ko.push(lookupCategoryMetaInfoUseIdDocument);
 categoryApiDocs.ko.push(lookupCategoryMetaInfoUseCodeDocument);
 

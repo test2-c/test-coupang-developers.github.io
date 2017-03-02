@@ -19,7 +19,7 @@ export const lookupCategoryMetaInfoUseIdDocument = {
   },
 
   apiInfo: {
-    state: ``,      // draft, candidate, release, unstable, stable, deprecated
+    state: `deprecated`,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: ``, // yyyy-mm-dd  ex> 2016-12-23
     developer: ``,
     domain: `https://api-gateway.coupang.com`,
