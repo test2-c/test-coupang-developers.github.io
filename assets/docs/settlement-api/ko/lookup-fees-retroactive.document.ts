@@ -1,6 +1,6 @@
 export const lookupFeesRetroactiveDocument = {
   note: ``,
-
+  
   //don't modify documentInfo
   documentInfo: {
     category: `settlement-api`,   // input category ex) exchange-service-api
@@ -15,9 +15,9 @@ export const lookupFeesRetroactiveDocument = {
       name: ``,
       anchorId: ``,
     },
-
+    
   },
-
+  
   apiInfo: {
     state: `release`,      // draft, candidate, release, unstable, stable, deprecated
     lastUpdateDate: `2017-01-09`, // yyyy-mm-dd  ex> 2016-12-23
@@ -46,7 +46,7 @@ export const lookupFeesRetroactiveDocument = {
         _referenceInfo: ``,
         _warning: ``
       }
-
+    
     ],
     queryStringParameters: [
       {
@@ -187,7 +187,25 @@ index, 첫 페이지 호출시 0 입력)`,
         {
           name: `saleType`,
           type: `String`,
-          _description: `saleType`,
+          _description: `
+          <table class="table">
+          <tr>
+            <th>ReturnParameter</th>     
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>SA</td>
+            <td>매출형태, 판매</td>
+          </tr>
+          <tr>
+            <td>RT</td>
+            <td>이달취소</td>
+          </tr>
+          <tr>
+            <td>RP</td>
+            <td>전달취소</td>
+          </tr>
+          </table>`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -238,20 +256,20 @@ index, 첫 페이지 호출시 0 입력)`,
           _warning: ``,
           children: false,
         }
-
+      
       ]
     }
   ],
   sample: {
-    endpoint:`https://api-gateway.coupang.com/v2/providers/greatwall_api/apis/api/v1/settlement/goods/fee-corrections/inquiries/A0002475?recognitionDate=2016-12-30&nextToken=1&maxPerPage=20`,
+    endpoint: `https://api-gateway.coupang.com/v2/providers/greatwall_api/apis/api/v1/settlement/goods/fee-corrections/inquiries/A0002475?recognitionDate=2016-12-30&nextToken=1&maxPerPage=20`,
     code: [
       {
         language: `http`,
         codeblock: {
-          "vendorId":"A00012697",
-          "recognitionDate":"2016-09-18",
-          "nextToken":"0",
-          "maxPerPage":50
+          "vendorId": "A00012697",
+          "recognitionDate": "2016-09-18",
+          "nextToken": "0",
+          "maxPerPage": 50
         }
       }
     ],

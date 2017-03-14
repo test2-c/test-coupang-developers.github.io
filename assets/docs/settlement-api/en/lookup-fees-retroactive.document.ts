@@ -182,7 +182,25 @@ If previous commission fee = actual commission fee. Then fee correction = 0`,
         {
           name: `saleType`,
           type: `String`,
-          _description: `saleType`,
+          _description: `
+          <table class="table">
+          <tr>
+            <th>ReturnParameter</th>     
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>SA</td>
+            <td>Sales Type, Sales</td>
+          </tr>
+          <tr>
+            <td>RT</td>
+            <td>Cancel this month</td>
+          </tr>
+          <tr>
+            <td>RP</td>
+            <td>Cancel last month</td>
+          </tr>
+          </table>`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,

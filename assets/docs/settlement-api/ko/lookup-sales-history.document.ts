@@ -183,7 +183,25 @@ index, 첫 페이지 호출시 0 입력)`,
         {
           name: `saleType`,
           type: `String`,
-          _description: `saleType`,
+          _description: `
+          <table class="table">
+          <tr>
+            <th>ReturnParameter</th>     
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>SA</td>
+            <td>매출형태, 판매</td>
+          </tr>
+          <tr>
+            <td>RT</td>
+            <td>이달취소</td>
+          </tr>
+          <tr>
+            <td>RP</td>
+            <td>전달취소</td>
+          </tr>
+          </table>`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
