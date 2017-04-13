@@ -173,7 +173,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `exchangeId`,
           type: `Number`,
-          _description: `교환 아이디`,
+          _description: `교환 ID`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -230,7 +230,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `orderDeliveryStatusLabel`,
           type: `String`,
-          _description: `Order delivery status label`,
+          _description: `주문 배송 상태 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -266,7 +266,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `exchangeStatusLabel`,
           type: `String`,
-          _description: `Exchange status label`,
+          _description: `교환 상태 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -299,7 +299,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `referTypeLabel`,
           type: `String`,
-          _description: `Refer type label`,
+          _description: `접수 경로 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -335,7 +335,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `faultTypeLabel`,
           type: `String`,
-          _description: `Fault type label`,
+          _description: `귀책 (배송비 부담 주체) 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -398,7 +398,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `createdByTypeLabel`,
           type: `String`,
-          _description: `Created by type label`,
+          _description: `최초 등록자 타입 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -416,7 +416,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `modifiedByType`,
           type: `String`,
-          _description: `수정인 타이프`,
+          _description: `수정자`,
           _relation: ``,
           _referenceInfo: `
                 <table>
@@ -443,7 +443,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `modifiedByTypeLabel`,
           type: `String`,
-          _description: `Modify type label`,
+          _description: `수정자 라벨`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -452,7 +452,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `modifiedAt`,
           type: `String`,
-          _description: `수정 날짜 시간`,
+          _description: `수정 일시`,
           _relation: ``,
           _referenceInfo: `Timestamp`,
           _warning: ``,
@@ -461,7 +461,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `exchangeItemDtoV1s`,
           type: `Array`,
-          _description: `Exchange item informations`,
+          _description: `교환 항목 목록`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -624,7 +624,7 @@ export const lookupChangeRequestListDocument = {
         {
           name: `exchangeAddressDtoV1`,
           type: `Object`,
-          _description: `Exchange address informations`,
+          _description: `교환 주소`,
           _relation: ``,
           _referenceInfo: ``,
           _warning: ``,
@@ -1084,7 +1084,7 @@ export const lookupChangeRequestListDocument = {
     }
   ],
   sample: {
-    endpoint:`https://api-gateway.coupang.com/v2/providers/openapi/apis/api/v4/vendors/{vendorId}/exchangeRequests?createdAtFrom=2016-09-01T00:00:00&createdAtTo=2016-09-08T00:00:00`,
+    endpoint:`https://api-gateway.coupang.com/v2/providers/openapi/apis/api/v4/vendors/A00012697/exchangeRequests?createdAtFrom=2017-03-30T00:02:00&createdAtTo=2017-03-30T00:02:30`,
     code: [
       {
         language: `http`,
@@ -1096,108 +1096,156 @@ export const lookupChangeRequestListDocument = {
         "code": "200",
         "message": "OK",
         "data": [
-            {
-                "exchangeId": 100000184,
-                "orderId": 4000000000198,
-                "vendorId": "A00010028",
-                "orderDeliveryStatusCode": "INSTRUCT",
-                "exchangeStatus": "CANCEL",
-                "referType": "CS_CENTER",
-                "faultType": "COUPANG",
-                "exchangeAmount": 0,
-                "reason": null,
-                "cancelReason": null,
-                "createdByType": "COUNSELOR",
-                "createdAt": 1473049045000,
-                "modifiedByType": "COUNSELOR",
-                "modifiedAt": 1473049045000,
-                "exchangeItemDtoV1s": [
-                    {
-                        "exchangeItemId": 1109,
-                        "orderItemId": 3000000018,
-                        "orderItemUnitPrice": 9900,
-                        "orderItemName": null,
-                        "orderPackageId": null,
-                        "orderPackageName": null,
-                        "targetItemId": 3000000018,
-                        "targetItemUnitPrice": 9900,
-                        "targetItemName": "컵케익 초코",
-                        "targetPackageId": -1,
-                        "targetPackageName": "",
+          {
+            "exchangeId": 100349846,
+            "orderId": 19000005513991,
+            "vendorId": "A00012697",
+            "orderDeliveryStatusCode": "FINAL_DELIVERY",
+            "exchangeStatus": "SUCCESS",
+            "referType": "CS_CENTER",
+            "faultType": "VENDOR",
+            "exchangeAmount": 0,
+            "reason": null,
+            "cancelReason": null,
+            "createdByType": "COUNSELOR",
+            "createdAt": "2017-03-30T00:19:24",
+            "modifiedByType": "TRACKING",
+            "modifiedAt": "2017-03-30T00:19:24",
+            "exchangeItemDtoV1s": [
+              {
+                "exchangeItemId": 785607,
+                "orderItemId": 3031118693,
+                "orderItemUnitPrice": 8150,
+                "orderItemName": null,
+                "orderPackageId": null,
+                "orderPackageName": null,
+                "targetItemId": 3031118693,
+                "targetItemUnitPrice": 8150,
+                "targetItemName": "핑크퐁 인기율동동요, 스마트스터디",
+                "targetPackageId": -1,
+                "targetPackageName": "",
+                "quantity": 1,
+                "orderItemDeliveryComplete": null,
+                "orderItemReturnComplete": null,
+                "targetItemDeliveryComplete": null,
+                "createdAt": "2017-03-30T00:19:24",
+                "modifiedAt": "2017-04-04T03:09:47",
+                "originalShipmentBoxId": 371479903
+              }
+            ],
+            "exchangeAddressDtoV1": {
+              "exchangeAddressId": 773037,
+              "returnCustomerName": "박희선",
+              "returnAddressZipCode": "46754",
+              "returnAddress": "부산광역시 강서구 녹산산업중로 285(송정동)",
+              "returnAddressDetail": "주식회사생 - 평일 회수/배송 요청",
+              "returnPhone": null,
+              "returnMobile": "010-7557-6628",
+              "returnMemo": null,
+              "deliveryCustomerName": "박희선",
+              "deliveryAddressZipCode": "46754",
+              "deliveryAddress": "부산광역시 강서구 녹산산업중로 285(송정동)",
+              "deliveryAddressDetail": "주식회사생 -평일 회수/배송 요청",
+              "deliveryPhone": null,
+              "deliveryMobile": "010-****-****",
+              "deliveryMemo": null,
+              "createdAt": "2017-03-30T00:19:24",
+              "modifiedAt": "2017-03-30T00:19:24",
+              "exchangeId": 100349846
+            },
+            "deliveryInvoiceGroupDtos": [
+              {
+                "shipmentBoxId": 372545359,
+                "boxPrice": 0,
+                "orderId": 19000005513991,
+                "orderType": "NORMAL",
+                "customerType": "regular",
+                "bundleType": null,
+                "extraMessage": null,
+                "shippingDeliveryType": null,
+                "deliveryInvoiceDtos": [
+                  {
+                    "invoiceNumber": "339243610644",
+                    "estimatedDeliveryDate": "2017-03-30T15:00:00",
+                    "deliveredDate": "2017-03-31T06:03:05",
+                    "statusModifiedAt": "2017-03-31T06:03:05",
+                    "invoiceNumberUploadDate": "2017-04-04T00:44:07",
+                    "statusCode": "FINAL_DELIVERY",
+                    "deliverCode": "CJGLS",
+                    "isMainShipmentInvoice": false,
+                    "parcelType": null,
+                    "invoiceVendorItemDtos": [
+                      {
+                        "vendorItemId": 3031118693,
                         "quantity": 1,
-                        "orderItemDeliveryComplete": null,
-                        "orderItemReturnComplete": null,
-                        "targetItemDeliveryComplete": null,
-                        "createdAt": 1473049045000,
-                        "modifiedAt": 1473049045000
-                    }
-                ],
-                "exchangeAddressDtoV1": {
-                    "exchangeAddressId": 1066,
-                    "returnCustomerName": "신대욱",
-                    "returnAddressZipCode": "06168",
-                    "returnAddress": "서울특별시 강남구 테헤란로 501",
-                    "returnAddressDetail": "경암빌딩 18층",
-                    "returnPhone": null,
-                    "returnMobile": "010-8801-4063",
-                    "returnMemo": null,
-                    "deliveryCustomerName": "신대욱",
-                    "deliveryAddressZipCode": "06168",
-                    "deliveryAddress": "서울특별시 강남구 테헤란로 501",
-                    "deliveryAddressDetail": "경암빌딩 18층",
-                    "deliveryPhone": null,
-                    "deliveryMobile": "010-****-****",
-                    "deliveryMemo": null,
-                    "createdAt": 1473049045000,
-                    "modifiedAt": 1473049045000,
-                    "exchangeId": 100000184
-                },
-                "deliveryInvoiceGroupDtos": [
-                    {
-                        "shipmentBoxId": 197278440,
-                        "boxPrice": 0,
-                        "orderId": 4000000000198,
-                        "orderType": "NORMAL",
-                        "customerType": "regular",
-                        "bundleType": "DEAL",
-                        "extraMessage": null,
-                        "shippingDeliveryType": null,
-                        "deliveryInvoiceDtos": [
-                            {
-                                "invoiceNumber": null,
-                                "estimatedDeliveryDate": null,
-                                "deliveredDate": null,
-                                "statusModifiedAt": 1473049046000,
-                                "invoiceNumberUploadDate": null,
-                                "statusCode": "ACCEPT",
-                                "deliverCode": "NONE",
-                                "isMainShipmentInvoice": true,
-                                "parcelType": null,
-                                "invoiceVendorItemDtos": [
-                                    {
-                                        "vendorItemId": 3000000018,
-                                        "quantity": 1,
-                                        "hasAdditionalItem": false,
-                                        "promiseDeliveryDate": null,
-                                        "estimatedShippingDate": null
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "orderDeliveryStatusLabel": "상품준비중",
-                "exchangeStatusLabel": "철회",
-                "referTypeLabel": "CS센터",
-                "faultTypeLabel": "Coupang 과실",
-                "createdByTypeLabel": "CS상담사",
-                "rejectable": false,
-                "modifiedByTypeLabel": "CS상담사",
-                "deliveryInvoiceModifiable": false,
-                "successable": false
-            }
+                        "promiseDeliveryDate": "2017-01-04T14:59:59",
+                        "hasAdditionalItem": false,
+                        "estimatedShippingDate": "2017-04-03T14:59:59"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "deliveryStatus": "CompleteDelivery",
+            "collectStatus": "CompleteCollect",
+            "collectCompleteDate": "2017-03-31T13:10:09",
+            "collectInformationsDto": {
+              "returnType": "EXCHANGE_RETURN",
+              "expectedReturnDate": "2017-04-04T00:19:24",
+              "returndeliveryItemDtos": [
+                {
+                  "vendorItemId": 3031118693,
+                  "statusCode": "RETURN_SEND_READY",
+                  "returnCount": null,
+                  "releaseStatus": "RELEASED",
+                  "paymentReturnDeliveryMapId": 22782725,
+                  "paymentItemId": 1,
+                  "modifiedBy": "yum0118@",
+                  "moodifiedAt": "2017-03-30T00:19:24",
+                  "createdBy": "yum0118@",
+                  "createdAt": "2017-03-30T00:19:24",
+                  "count": 1,
+                  "confirmType": null,
+                  "collectStatus": "RETURN"
+                }
+              ],
+              "returndeliveryDestinationDto": {
+                "vendorZipCode": "108-46",
+                "vendorPhone": "031-944-4774",
+                "vendorName": "예스이십사주식회사",
+                "vendorMobile": "031-944-4774",
+                "vendorAddressDetail": "-",
+                "vendorAddress": "경기도 파주시 탄현면 금승리 583-5 YES24.com",
+                "safetyNumberStatus": "DISABLE",
+                "safetyNumberId": 123730827,
+                "safetyNumber": "05025771526",
+                "returnDeliveryId": null,
+                "returnCenterCode": "1000243825",
+                "receiptId": null,
+                "orderedByMobile": null,
+                "orderId": 19000005513991,
+                "message": null,
+                "customerZipCode": "467-54",
+                "customerPhone": "010-7557-6628",
+                "customerName": "박희선",
+                "customerMobile": "010-7557-6628",
+                "customerAddressDetail": "주식회사생 - 평일 회수/배송 요청",
+                "customerAddress": "부산광역시 강서구 녹산산업중로 285(송정동)"
+              }
+            },
+            "modifiedByTypeLabel": "COUNSELOR",
+            "deliveryInvoiceModifiable": false,
+            "successable": false,
+            "orderDeliveryStatusLabel": "FINAL_DELIVERY",
+            "exchangeStatusLabel": "SUCCESS",
+            "referTypeLabel": "CS_CENTER",
+            "faultTypeLabel": "VENDOR",
+            "createdByTypeLabel": "COUNSELOR",
+            "rejectable": false
+          }
         ],
-        "nextToken": "1"
+        "nextToken": ""
     },
     _description: ``,
     _relation: ``,
