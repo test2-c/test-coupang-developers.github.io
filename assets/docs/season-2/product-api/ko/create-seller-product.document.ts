@@ -176,10 +176,6 @@ export const createSellerProductDocument = {
           <td>CJ대한통운</td>
         </tr>
         <tr>
-          <td>KGB</td>
-          <td>로젠택배</td>
-        </tr>
-        <tr>
           <td>KGBLS</td>
           <td>KGB택배</td>
         </tr>
@@ -669,7 +665,7 @@ export const createSellerProductDocument = {
             children: false
           }
           ,
-          
+
           {
             name: `maximumBuyCount`,
             type: `Number`,
